@@ -1,6 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <struct name="Person">
-    <field name="name" type="string" />
+    <field name="na
+    me" type="string" />
     <field name="age" type="int" />
-    <description>This defines a person</description>
+    <field name="" type="int" />
+    <description > This defines    a person </description >
+    <description2> This defines    a person </description2>
+    <description3>This defines    a person</description3>
+    <description4>This defines a person</description4>
 </struct>

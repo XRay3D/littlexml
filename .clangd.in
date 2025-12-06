@@ -1,0 +1,46 @@
+If:                               # Apply this config conditionally
+  PathMatch: .*\.cppm       # to all cppm
+CompileFlags:
+  Add: [-xc++-module, -fcxx-modules, -std=c++20, -fmodules]
+  CompilationDatabase: '@CMAKE_BINARY_DIR@'
+
+Diagnostics:
+  ClangTidy:
+    Add:
+      - modernize-*
+      - performance-*
+      - readability-*
+
+#  Add: #[
+#    - -fcxx-modules
+#    - -fmodules
+#    - -fimplicit-modules
+#    # - -fimplicit-module-maps
+#    # "-fmodules-cache-path=build/modules-cache
+#    # "-I", "include"
+#    #]
+
+# ---
+# If:                               # Apply this config conditionally
+#   PathMatch: [.*.cppm]       # to all cppm
+#   # PathExclude: internal/.*        # except all files within "internal"
+# CompileFlags:
+#   CompilationDatabase: 'cmake'
+#   CompilationDatabase: 'cmake'
+#   # Включаем поддержку C++20 модулей
+#   Add:
+#     -fcxx-modules
+#     -fmodules
+#     -fimplicit-modules
+#     -fimplicit-module-maps
+#     # - -std=c++20
+#     # - -fmodules
+#     # - -fimplicit-modules
+#     # - -fimplicit-module-maps
+#     # - -Xclang
+#     # - -fmodules-codegen
+#     # - -Xclang
+#     # - -fmodules-debuginfo
+#   # Пути для поиска модулей
+#   # CompilationDatabase: Build
+# ---
